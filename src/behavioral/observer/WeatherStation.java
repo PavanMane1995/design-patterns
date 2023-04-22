@@ -1,6 +1,7 @@
 package behavioral.observer;
 
 import behavioral.observer.impl.ForecastDisplay;
+import behavioral.observer.impl.MobileDisplay;
 import behavioral.observer.impl.WeatherData;
 
 public class WeatherStation {
@@ -9,6 +10,7 @@ public class WeatherStation {
         WeatherData weatherData = new WeatherData();
 
         ForecastDisplay forecastDisplay = new ForecastDisplay(weatherData);
+        MobileDisplay mobileDisplay = new MobileDisplay(weatherData);
         weatherData.setMessurements(12, 13, 30);
     }
 }
